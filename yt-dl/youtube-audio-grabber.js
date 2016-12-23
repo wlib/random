@@ -1,38 +1,26 @@
-/* Thank you @svnpenn for insight - http://superuser.com/a/773998 */
-
-function parse(query) {
-    const allpairs = query.split("&");
-    const out = {};
-    for (let i = 0; i < allpairs.length; i++) {
-      let pair = allpairs[i].split("=");
-      let key = pair[0];
-      let val = pair[1];
-      out[key] = val;
-    }
-  return out;
+function uniq(item, pos, self) {
+  return self.indexOf(item) == pos;
 }
 
-function getAudio(objects, mime = "webm") {
-  const regex = new RegExp("audio/" + mime + ".+");
-  const output = [];
-  for (let i = 0; i < objects.length; i++) {
-    const streamType = decodeURIComponent(objects[i].type);
-    if ( streamType.match(regex) ) {
-      output.push(objects[i]);
+function getStreams() {
+  const ytPlayerApi = yt.player.Application.create("player-api", ytplayer.config);
+  ytPlayerApi.dispose();
+  const videoData = JSON.stringify(ytPlayerApi.getVideoData());
+  const streamUrls = videoData.match( /https:[^"]+videoplayback[^"]+/g ).filter(uniq);
+  const signatures = videoData.match( /[0-9A-F.]+(?=")/g ).filter(z => z.length > 20).filter(uniq);
+  return streamUrls.map((url, i) => url + "&signature=" + signatures[i]);
+}
+
+function getAudioUrl(streams, mime = "mp4") {
+  const audioRegex = new RegExp( "mime=audio%2f" + mime, "i" );
+  for (let i = 0; i < streams.length; i++) {
+    if (streams[i].match(audioRegex)) {
+      return streams[i];
     }
   }
-  return output;
 }
 
-const info = ytplayer.config.args.adaptive_fmts;
-const infoArray = info.split(",");
-let objects = [];
+const streams = getStreams();
+const audioUrl = getAudioUrl(streams);
 
-for (let i = 0; i < infoArray.length; i++) {
-  objects.push( parse(infoArray[i]) );
-  objects[i].url = decodeURIComponent(objects[i].url) + "&ratebypass=yes&ratebypass";
-}
-
-if (objects[0].s) {
-  //
-}
+console.log(audioUrl);
