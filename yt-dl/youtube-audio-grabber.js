@@ -1,3 +1,6 @@
+/* Thanks to @svnpenn for insight - https://superuser.com/a/773998 and
+https://raw.githubusercontent.com/svnpenn/bm/gh-pages/yt-dl/yt-dl.js */
+
 function uniq(item, pos, self) {
   return self.indexOf(item) == pos;
 }
@@ -20,7 +23,8 @@ function getAudioUrl(streams, mime = "mp4") {
   }
 }
 
-const streams = getStreams();
-const audioUrl = getAudioUrl(streams);
+dlhandler = "https://de.surge.sh/ytdl";
+streams = getStreams();
+audioUrl = getAudioUrl(streams);
 
-console.log(audioUrl);
+window.open( dlhandler + "/?url=" + encodeURIComponent(audioUrl) );
