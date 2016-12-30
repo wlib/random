@@ -35,6 +35,11 @@ inst node
 debinst https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 debinst https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable
 
+# Other packages
+sudo gem install aft
+sudo gem install surgescrape
+sudo npm install -g surge
+
 # Add and install
 sudo add-apt-repository 'deb http://www.mediahuman.com/packages/ubuntu trusty main'
 sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 7D19F1F3
