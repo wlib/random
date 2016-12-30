@@ -46,6 +46,10 @@ sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 7D19F1F3
 sudo apt-get update
 inst youtube-to-mp3
 
+# Clean up
+sudo apt autoremove
+sudo apt autoclean
+
 # Run the new programs to easily add them all to dock
 google-chrome
 blender
