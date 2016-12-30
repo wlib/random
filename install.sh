@@ -5,6 +5,7 @@
 sudo apt-get install apt --assume-yes
 sudo apt update --assume-yes
 sudo apt upgrade --assume-yes
+sudo apt dist-upgrade
 
 # Functions to make auto-installation simple
 inst() {
