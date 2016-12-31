@@ -30,7 +30,8 @@ inst gparted
 inst cmake
 inst git
 inst ruby
-inst node
+inst nodejs-legacy
+inst vim
 
 # Download and install these
 debinst https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
