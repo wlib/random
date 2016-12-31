@@ -31,6 +31,7 @@ inst cmake
 inst git
 inst ruby
 inst nodejs-legacy
+inst npm
 inst vim
 
 # Download and install these
