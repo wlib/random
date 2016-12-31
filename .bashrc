@@ -157,3 +157,16 @@ xsleep() {
   xset -display :0.0 dpms force off
 }
 
+inst() {
+  sudo apt install $1 --assume-yes
+}
+
+debinst() {
+  wget $1 -O /tmp/install.deb
+  sudo dpkg -i /tmp/install.deb
+  inst -f
+}
+
+update-vscode() {
+  debinst https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable
+}
