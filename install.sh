@@ -9,34 +9,22 @@ sudo apt dist-upgrade
 
 # Functions to make auto-installation simple
 inst() {
-  sudo apt install $1 --assume-yes
+  sudo apt install $* --assume-yes
 }
 
 debinst() {
-  wget $1 -O /tmp/install.deb
-  sudo dpkg -i /tmp/install.deb
-  inst -f
+  for link in "$@"; do
+    wget $link -O /tmp/install.deb
+    sudo dpkg -i /tmp/install.deb
+    inst -f
+  done
 }
 
 # Install a list of programs from repo
-inst preload
-inst guake
-inst blender
-inst inkscape
-inst audacity
-inst gimp
-inst nautilus-dropbox
-inst gparted
-inst cmake
-inst git
-inst ruby
-inst nodejs-legacy
-inst npm
-inst vim
+inst preload guake blender inkscape audacity gimp nautilus-dropbox vim gparted cmake git ruby nodejs-legacy npm
 
 # Download and install these
-debinst https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
-debinst https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable
+debinst https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable
 
 # Other packages
 sudo gem install aft
