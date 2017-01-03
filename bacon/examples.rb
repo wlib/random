@@ -3,7 +3,7 @@
 # Examples for lib.rb
 # Daniel Ethridge
 
-load "./bacon.rb"
+load "./lib.rb"
 
 # Test rand_params()
 params = rand_params()
