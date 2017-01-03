@@ -3,7 +3,7 @@
 # This is a simple command line interface for lib.rb
 # Daniel Ethridge
 
-load "./bacon.rb"
+load "./lib.rb"
 
 case ARGV[0].downcase
   when "-d", "d", "--details", "details"
