@@ -5,6 +5,13 @@
 
 load "./lib.rb"
 
+if ARGV.empty?
+  params = rand_params()
+  bacon = get(params)
+  puts bacon
+  exit
+end
+
 case ARGV[0].downcase
   when "-d", "d", "--details", "details"
     params = rand_params()
