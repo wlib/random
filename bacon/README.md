@@ -27,6 +27,7 @@ puts bacon
 
 Here's a neat little description of the api in YAML...
 
+```YAML
 ---
 url: https://baconipsum.com/api?
 params:
@@ -42,3 +43,4 @@ params:
   - json
   - text
   - html
+```
