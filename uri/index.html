@@ -2,36 +2,42 @@
   <head>
     <title>URI Custom Schemes</title>
     <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="./uri.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta id="theme" name="theme-color" content="#3790CC">
   </head>
   <body>
     <div id="container">
       <h1 id="title">URI Custom Schemes</h1>
-      <div class="dropdown">
-        <select name="scheme" size="1">
-          <option value="about">about: About</option>
-          <option value="data">data: decode Data</option>
-          <option value="fax">fax: Fax</option>
-          <option value="file">file: host files</option>
-          <option value="ftp">ftp: File Transfer Protocol</option>
-          <option value="imap">imap: Internet Message Access Protocol</option>
-          <option value="irc">irc: Internet Room Chat</option>
-          <option value="mailto">mailto: email</option>
-          <option value="pop">pop: Post Office Protocol v3</option>
-          <option value="rtsp">rtsp: RealTime Streaming Protocol</option>
-          <option value="sms">sms: text with SMS</option>
-          <option value="tel">tel: Telephone</option>
-          <option value="telnet">telnet: Telnet session</option>
-          <option value="view-source">view-source: View page source</option>
-          <option value="ws">ws: WebSockets protocol</option>
-          <option value="wss">wss: WebSockets protocol Secure</option>
-        </select>
+      <div id="display">
+        <h4>type a URI or click a preset</h4>
+        <div id="inputs">
+          <input id="input0">
+          <!--- Input boxes will be placed in here --->
+        </div>
+      </div>
+      <div id="presets">
+        <div id="common">
+          <h4>Common</h4>
+          <button id="about">about: About</button>
+          <button id="data">data: decode Data</button>
+          <button id="fax">fax: Fax</button>
+          <button id="file">file: host files</button>
+          <button id="ftp">ftp: File Transfer Protocol</button>
+          <button id="imap">imap: Internet Message Access Protocol</button>
+          <button id="irc">irc: Internet Room Chat</button>
+          <button id="mailto">mailto: email</button>
+          <button id="pop">pop: Post Office Protocol v3</button>
+          <button id="rtsp">rtsp: RealTime Streaming Protocol</button>
+          <button id="sms">sms: text with SMS</button>
+          <button id="tel">tel: Telephone</button>
+          <button id="telnet">telnet: Telnet session</button>
+          <button id="view-source">view-source: View page source</button>
+          <button id="ws">ws: WebSockets protocol</button>
+          <button id="wss">wss: WebSockets protocol Secure</button>
+         </div>
       </div>
     </div>
-    <script>
-      
-    </script>
-    <!---<script src="./js/uri.js"></script>--->
+    <script src="./uri.js"></script>
   </body>
 </html>
