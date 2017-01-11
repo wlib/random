@@ -1,6 +1,6 @@
 function bm() {
-    var b, d, e;
-    b = document, d = b.body, e = b.createElement("div"), e.innerHTML = "<br>" + a, d.innerHTML = c, d.appendChild(e)
+    var e;
+    e = document.createElement("div"), e.innerHTML = "<br>" + a, document.body.innerHTML = c, document.body.appendChild(e)
 }
 
 function bn(a) {
