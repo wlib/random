@@ -3,7 +3,7 @@
 # This is a simple command line interface for lib.rb
 # Daniel Ethridge
 
-load "./lib.rb"
+load "#{File.dirname(__FILE__)}/lib.rb"
 
 if ARGV.empty?
   params = rand_params()

@@ -2,7 +2,7 @@
 
 html {
   overflow-x: hidden;
-  font-size: 62.5% 
+  font-size: 62.5%
 }
 
 body {
@@ -86,7 +86,7 @@ input {
   text-align: center;
 }
 
-#presets button {
+#schemes button {
   display: block;
   text-align: center;
   background-color: #eaeaea;
@@ -98,7 +98,7 @@ input {
   transition: 0.5s;
 }
 
-#presets button:hover {
+#schemes button:hover {
   background-color: #fff;
   transition: 0.35s;
 }

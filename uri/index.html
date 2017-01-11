@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>URI Custom Schemes</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <!--- <link rel="stylesheet" type="text/css" href="/css/base.css"> -->
     <link rel="stylesheet" type="text/css" href="./uri.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta id="theme" name="theme-color" content="#3790CC">
@@ -13,29 +13,28 @@
         <h4>type a URI or click a preset</h4>
         <div id="inputs">
           <input id="input0">
-          <!--- Input boxes will be placed in here --->
         </div>
       </div>
-      <div id="presets">
-        <div id="common">
-          <h4>Common</h4>
-          <button class="uri" id="about">about: About</button>
-          <button class="uri" id="data">data: decode Data</button>
-          <button class="uri" id="fax">fax: Fax</button>
-          <button class="uri" id="file">file: host files</button>
-          <button class="uri" id="ftp">ftp: File Transfer Protocol</button>
-          <button class="uri" id="imap">imap: Internet Message Access Protocol</button>
-          <button class="uri" id="irc">irc: Internet Room Chat</button>
-          <button class="uri" id="mailto">mailto: email</button>
-          <button class="uri" id="pop">pop: Post Office Protocol v3</button>
-          <button class="uri" id="rtsp">rtsp: RealTime Streaming Protocol</button>
-          <button class="uri" id="sms">sms: text with SMS</button>
-          <button class="uri" id="tel">tel: Telephone</button>
-          <button class="uri" id="telnet">telnet: Telnet session</button>
-          <button class="uri" id="view-source">view-source: View page source</button>
-          <button class="uri" id="ws">ws: WebSockets protocol</button>
-          <button class="uri" id="wss">wss: WebSockets protocol Secure</button>
-         </div>
+      <div id="schemeChoices">
+        <h4 id="schemeName"></h4>
+        <div id="schemes">
+          <button id="about">about: About</button>
+          <button id="data">data: decode Data</button>
+          <button id="fax">fax: Fax</button>
+          <button id="file">file: host files</button>
+          <button id="ftp">ftp: File Transfer Protocol</button>
+          <button id="imap">imap: Internet Message Access Protocol</button>
+          <button id="irc">irc: Internet Room Chat</button>
+          <button id="mailto">mailto: email</button>
+          <button id="pop">pop: Post Office Protocol v3</button>
+          <button id="rtsp">rtsp: RealTime Streaming Protocol</button>
+          <button id="sms">sms: text with SMS</button>
+          <button id="tel">tel: Telephone</button>
+          <button id="telnet">telnet: Telnet session</button>
+          <button id="view-source">view-source: View page source</button>
+          <button id="ws">ws: WebSockets protocol</button>
+          <button id="wss">wss: WebSockets protocol Secure</button>
+        </div>
       </div>
     </div>
     <script src="./uri.js"></script>

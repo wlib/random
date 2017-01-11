@@ -3,7 +3,7 @@
 # Examples for lib.rb
 # Daniel Ethridge
 
-load "./lib.rb"
+load "#{File.dirname(__FILE__)}/lib.rb"
 
 # Test rand_params()
 params = rand_params()
